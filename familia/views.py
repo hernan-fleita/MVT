@@ -99,5 +99,7 @@ def buscar(request):
     elif request.method == "GET":
         form_busqueda = BuscarPersonasForm()
         return render(request, 'familia/form_busqueda.html', {"form_busqueda": form_busqueda})
+
+
         
     

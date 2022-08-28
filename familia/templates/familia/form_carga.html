@@ -24,9 +24,9 @@
       {% if actualizar %}
         {% bootstrap_button "Actualizar" button_type="submit" button_class="btn-primary" %} 
       {% else %}
-        {% bootstrap_button "Guardar" button_type="submit" button_class="btn-primary" %}
+        {% bootstrap_button "Agregrar" button_type="submit" button_class="btn-primary" %}
       {% endif %}
-      
+      {% bootstrap_button "Cancelar" button_class="btn-danger" button_type="link" href={%url  'index' %}%}
       </form>
      </div>
    </div>

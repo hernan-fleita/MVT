@@ -7,8 +7,8 @@ class PersonaForm(forms.Form):
     # input_format hace que se pueda ingresar la fecha con el formato latino, dia/mes/año
     fecha_nacimiento = forms.DateField(label="fecha_nacimiento", input_formats=["%d/%m/%Y"],
     #widget es para poder agregar un tip para que el usuario sepa como ingresar la fecha
-    widget=forms.TextInput(attrs={'placeholder': '30/12/1995'}))
-    altura = forms.FloatField(widget=forms.NumberInput(attrs={'placeholder': "1.75 m"}))
+    widget=forms.TextInput(attrs={'placeholder': '05/09/1986'}))
+    altura = forms.FloatField(widget=forms.NumberInput(attrs={'placeholder': "1.72 m"}))
 
 
 class ActualizarPersonaForm(PersonaForm):
