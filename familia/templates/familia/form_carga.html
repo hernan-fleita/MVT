@@ -15,18 +15,23 @@
       {% if actualizar %}
           <form action="{% url  'actualizar_action' %}" method="post">
       {% else %}     
-          <form action="{% url  'agregar'%}" method="post">
+          <form action="{% url  'agregar'%}" method="post">          
       {% endif %}
+
+      
 
       {% csrf_token %} 
       {% bootstrap_form form %}
     
       {% if actualizar %}
         {% bootstrap_button "Actualizar" button_type="submit" button_class="btn-primary" %} 
-      {% else %}
-        {% bootstrap_button "Agregrar" button_type="submit" button_class="btn-primary" %}
-      {% endif %}
-      {% bootstrap_button "Cancelar" button_class="btn-danger" button_type="link" href={%url  'index' %}%}
+      {% else %}      
+        {% bootstrap_button "Agregrar" button_type="submit" button_class="btn-primary" %}       
+      {% endif %}  
+      
+      <a href="{{ view.get_success_url }}" class="btn btn-danger">Cancelar</a>
+      
+      
       </form>
      </div>
    </div>

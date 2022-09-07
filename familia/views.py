@@ -36,7 +36,7 @@ def agregar(request):
     elif request.method == "GET":
         form = PersonaForm()
     else:
-        return HttpResponseBadRequest("Error no conzco ese metodo para esta request")
+        return HttpResponseBadRequest("Error")
 
     
     return render(request, 'familia/form_carga.html', {'form': form})
@@ -53,7 +53,7 @@ def borrar(request, identificador):
             persona.delete()
         return HttpResponseRedirect(reverse("index"))
     else:
-        return HttpResponseBadRequest("Error no conzco ese metodo para esta request")
+        return HttpResponseBadRequest("Error")
 
 
 def actualizar(request, identificador=''):
